@@ -1,0 +1,23 @@
+.bg-highlight {
+  background: linear-gradient(to top, #97eded 20%, transparent 40%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.introduction-image-container {
+  position: relative;
+}
+
+.hover-text-placeholder {
+  position: absolute;
+  bottom: 1rem; /* Adjust as needed */
+  right: 1rem;   /* Adjust as needed */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  z-index: 10;
+  pointer-events: none; /* Ensures the text doesn't interfere with mouse events */
+}
