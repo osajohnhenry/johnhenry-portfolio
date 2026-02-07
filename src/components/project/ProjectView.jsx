@@ -12,7 +12,7 @@ import card6 from "../../assets/images/portfolio-images/card-6.png";
 const projectData = [
   { id: 1, image: card1, category: "QA TESTING", title: "BGC Bus App", description: "Transport app for commuters to pay for their bus fare as well as track the arrival time of the buses to their nearest station." },
   { id: 2, image: card2, category: "QA TESTING", title: "San Pedro App", description: "An app catered for the citizens to immediately request for emergency assistance and keep track of the latest news from their government." },
-  { id: 3, image: card3, category: "QA TESTING", title: "Mission Eye (Tagaligtas)", description: "Web application which consists of a GIS map to aid military missions as well as modules to help digitalize other manual processes." },
+  { id: 3, image: card3, category: "QA TESTING", title: "Mission Eye (Tagaligtas)", description: "GIS-based situational awareness and incident tracking platform which provides a real-time operational view via an interactive map." },
   { id: 4, image: card4, category: "QA TESTING", title: "e-Notary", description: "Web application that allows users to request a digital notarization as well as consultations with lawyers online." },
   { id: 5, image: card5, category: "QA TESTING", title: "Project Liwanag", description: "Advanced e-learning platform tailored for teachers to help them gain more knowledge and skills to become more efficient in teaching their students." },
   { id: 6, image: card6, category: "QA TESTING", title: "IRIS", description: "Digital Signage Content Management System which helps organizations manage and display digital content on their signage systems." },
@@ -21,138 +21,109 @@ const projectData = [
 const hardcodedTestCases = {
   1: [
     {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Validation displayed correctly",
+      testId: "TC_BGC_001",
+      scenario: "Guest access",
+      functionalTest: "Validate that the app allows users to open and access the app without registering or logging in",
+      expectedResult: "User should be able to view and access the app (bus ETA & basic route info) without logging in",
+      actualResult: "The user was able to access the bus ETA screen without logging in",
       status: "Passed",
     },
     {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Nothing happened",
-      status: "Failed",
-    },
-    {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Validation displayed correctly",
+      testId: "TC_BGC_007",
+      scenario: "Restricted features for guests",
+      functionalTest: "Validate that Guest Users cannot access QR Payment features (generate QR, e-wallet, transactions)",
+      expectedResult: "Guest users should be unable to access the QR payment features (generate QR, e-wallet, transactions)",
+      actualResult: "Guest users was unable to access the QR payment features (generate QR, e-wallet, transactions)",
       status: "Passed",
     },
     {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Nothing happened",
+      testId: "TC_BGC_015",
+      scenario: "Login/Registration access",
+      functionalTest: "Validate that the login and registration options are accessible to guest user",
+      expectedResult: "Both the login and registration options should be visible and accessible to guest users in all screens of the app",
+      actualResult: "There is currently no option for guest users to login or register in the ETA screen",
       status: "Failed",
     },
     {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Validation displayed correctly",
+      testId: "TC_BGC_036",
+      scenario: "Bus departure indication",
+      functionalTest: "Validate that once the bus departs from a station, the station it left appears as inactive (grayed out or visually distinct)",
+      expectedResult: "The station indicator should be grayed out",
+      actualResult: "The station indicator was grayed out after the bus left the station",
       status: "Passed",
     },
     {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Nothing happened",
-      status: "Failed",
-    },
-    {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Validation displayed correctly",
+      testId: "TC_BGC_039",
+      scenario: "Bus indicator movement",
+      functionalTest: "Validate that when the bus leaves a station, the bus indicator moves toward the middle of the route line between the previous and next station",
+      expectedResult: "The bus indicator should move toward the middle of the route line between the previous and next station",
+      actualResult: "The bus indicator moved toward the middle of the route line between the previous and next station",
       status: "Passed",
     },
     {
-      module: "IP-12 Petty Cash",
-      scenario: "Validate required fields",
-      testId: "TC_IP_001",
-      functionalTest: "Submit form with missing required fields",
-      expectedResult: "Validation messages should appear",
-      actualResult: "Nothing happened",
-      status: "Failed",
-    },
+      testId: "TC_BGC_040",
+      scenario: "Bus indicator movement",
+      functionalTest: "Validate that once the bus reaches the next station, the bus indicator stops exactly at that station",
+      expectedResult: "The bus indicator should stop exactly at that station",
+      actualResult: "The bus indicator stopped exactly at that station",
+      status: "Passed",
+    }
   ],
   2: [
     {
-      module: "IP-13 Cash Advance",
-      scenario: "Submit request",
-      testId: "TC_CA_001",
-      functionalTest: "Submit valid cash advance request",
-      expectedResult: "Request routed to FPC review",
-      actualResult: "Request successfully routed",
+      testId: "TC_SP_001",
+      scenario: "Onboarding",
+      functionalTest: "Validate that the user will be directed to the onboarding screens upon first opening the app",
+      expectedResult: "User should be directed to the onboarding screens upon first opening the app",
+      actualResult: "User was directed to the onboarding screens upon first opening the app",
       status: "Passed",
     },
-  ],
-  3: [
     {
-      module: "FPC Review",
-      scenario: "View submitted requests",
-      testId: "TC_FPC_001",
-      functionalTest: "Login as FPC and view submitted requests",
-      expectedResult: "Requests should be visible",
-      actualResult: "Requests visible to FPC",
+      testId: "TC_SP_005",
+      scenario: "Registration entry",
+      functionalTest: "Validate that the user will be redirected to the registration screen when they tap on the 'Register' button in the onboarding screens",
+      expectedResult: "User should be redirected to the registration screen",
+      actualResult: "User was redirected to the registration screen",
       status: "Passed",
     },
-  ],
-  4: [
     {
-      module: "CEO Approval",
-      scenario: "Approve request",
-      testId: "TC_CEO_001",
-      functionalTest: "Approve FPC-reviewed request",
-      expectedResult: "Request proceeds to cash release",
-      actualResult: "Request moved to cash release stage",
+      testId: "TC_SP_007",
+      scenario: "Registration form",
+      functionalTest: "Validate that the user can fill out the registration form and submit it successfully",
+      expectedResult: "Registration form should be submitted successfully",
+      actualResult: "Registration form was submitted successfully",
       status: "Passed",
     },
-  ],
-  5: [
     {
-      module: "Cash Release",
-      scenario: "Release amount validation",
-      testId: "TC_REL_001",
-      functionalTest: "Release amount exceeding request",
-      expectedResult: "System should block release",
-      actualResult: "System blocked excessive release",
-      status: "Failed",
-    },
-  ],
-  6: [
-    {
-      module: "Receipt Upload",
-      scenario: "Upload receipt",
-      testId: "TC_REC_001",
-      functionalTest: "Upload PDF receipt",
-      expectedResult: "Receipt accepted successfully",
-      actualResult: "PDF uploaded without errors",
+      testId: "TC_SP_011",
+      scenario: "MPIN setup",
+      functionalTest: "Validate that the user can set up their MPIN",
+      expectedResult: "MPIN should be set up successfully",
+      actualResult: "MPIN was set up successfully",
       status: "Passed",
     },
-  ],
+    {
+      testId: "TC_SP_015",
+      scenario: "Successful account creation",
+      functionalTest: "Validate that after successfully submitting the registration form and setting up the MPIN, the user's account is created and they are redirected to the login screen",
+      expectedResult: "User should be redirected to the login screen",
+      actualResult: "User was redirected to the login screen",
+      status: "Passed",
+    },
+    {
+      testId: "TC_SP_016",
+      scenario: "Login",
+      functionalTest: "Validate that the user can log in with their registered credentials",
+      expectedResult: "User should be able to log in successfully and be redirected to the home screen",
+      actualResult: "User was able to log in successfully and was redirected to the home screen",
+      status: "Passed",
+    },
+  ]
 };
 
 const ProjectView = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [enlargedImage, setEnlargedImage] = useState(null); // State for enlarged image
+  const [enlargedImage, setEnlargedImage] = useState(null); // State sa clicked image
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -175,7 +146,7 @@ const ProjectView = () => {
       <div className="xl:mb-17.5 mb-5 text-center">
         <p className="section-title">Recent Projects</p>
         <p className="font-normal text-[18px] pt-6 text-gray-400">
-          Here are the recent projects that I have worked on as a QA Analyst. Click on "See More" to view some of the test cases that I have executed for each project. 
+          Here are the recent projects that I have worked on as a QA Analyst. Click on "See More" to view more details. 
         </p>
       </div>
 
@@ -231,7 +202,7 @@ const ProjectView = () => {
               {/* Test cases section */}
               <div className="p-6">
                 <h3 className="text-lg font-semibold mb-4">Test Cases</h3>
-                <h6 className="text-gray-500 mb-4">Please note that due to confidentiality agreements, all test steps and test data are omitted for security reasons.</h6>
+                <h6 className="text-gray-500 mb-4">Please note that due to confidentiality agreements, some projects do not allow test cases to be displayed publicly.</h6>
                 <TestCaseTable testData={hardcodedTestCases[selectedProject.id] || []} />
               </div>
             </div>

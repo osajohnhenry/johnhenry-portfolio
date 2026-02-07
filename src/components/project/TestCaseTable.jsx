@@ -12,10 +12,9 @@ const TestCaseTable = ({ testData = [] }) => {
       <table className="min-w-full border border-gray-300 text-sm">
         <thead className="bg-blue-600 text-white">
           <tr>
-            <th className="border p-2">Modules / Ticket</th>
-            <th className="border p-2">Description</th>
             <th className="border p-2">Test ID</th>
-            <th className="border p-2">Test Scenario</th>
+            <th className="border p-2">Description</th>
+            <th className="border p-2">Test Case</th>
             <th className="border p-2">Expected Result</th>
             <th className="border p-2">Actual Result</th>
             <th className="border p-2">Status</th>
@@ -25,9 +24,8 @@ const TestCaseTable = ({ testData = [] }) => {
         <tbody>
           {testData.map((row, index) => (
             <tr key={index} className="even:bg-gray-50">
-              <td className="border p-2">{row.module}</td>
+              <td className="border p-2">{row.testId}</td> 
               <td className="border p-2">{row.scenario}</td>
-              <td className="border p-2">{row.testId}</td>
               <td className="border p-2">{row.functionalTest}</td>
               <td className="border p-2">{row.expectedResult}</td>
               <td className="border p-2">{row.actualResult}</td>

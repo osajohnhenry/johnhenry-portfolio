@@ -105,7 +105,7 @@ const Profile = () => {
             </Link>
             <a
               className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary ms-4 text-xs xxs:text-[14px] sm:text-[16px]"
-              href="https://drive.google.com/file/d/1TAM2skuo1Bp5BCXTbprZeg2wDQ2Sqily/view?usp=sharing"
+              href="https://drive.google.com/file/d/1KkBnUiFoASEMv79rUoPfC2JhqSLPU_On/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
             >
