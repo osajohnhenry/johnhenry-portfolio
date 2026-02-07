@@ -6,8 +6,8 @@ import InformationSummary from "./InformationSummary";
 import { Link } from "react-scroll"; // Import Link from react-scroll
 
 const informationSummaryData = [
-  { id: 1, title: "Years of Experience", description: "1+" },
-  { id: 2, title: "Involved Projects", description: "30+" },
+  { id: 1, title: "Years of Experience", description: "1.7" },
+  { id: 2, title: "Involved Projects", description: "15" },
   { id: 3, title: "Companies worked at", description: "2" },
 ];
 
@@ -71,7 +71,7 @@ const Introduction = () => {
               to="contact"
               smooth={true}
               duration={1000}
-              offset={-140} // Adjust this value based on your header height
+              offset={-120} // Adjust this value based on your header height
             >
               Say Hello!
             </Link>

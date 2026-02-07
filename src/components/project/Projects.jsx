@@ -40,7 +40,7 @@ const Projects = ({ data, onSeeMoreClick }) => {
             onClick={onSeeMoreClick}
             className="btn bg-white text-sm font-semibold mt-5 w-full hover:border-picto-primary hover:text-picto-primary transition-all"
           >
-            View Sample Test Cases
+            See More
             <span className="ms-2">
               <FontAwesomeIcon icon={faArrowRight} />
             </span>

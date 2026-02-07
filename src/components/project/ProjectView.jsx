@@ -2,20 +2,20 @@ import { useState } from "react";
 import Projects from "./Projects";
 import TestCaseTable from "./TestCaseTable";
 
-import card1 from "../../assets/images/portfolio-images/card-1.png";
+import card1 from "../../assets/images/portfolio-images/card-1.jpg";
 import card2 from "../../assets/images/portfolio-images/card-2.jpg";
-import card3 from "../../assets/images/portfolio-images/card-3.jpg";
+import card3 from "../../assets/images/portfolio-images/card-3.png";
 import card4 from "../../assets/images/portfolio-images/card-4.png";
 import card5 from "../../assets/images/portfolio-images/card-5.png";
-import card6 from "../../assets/images/portfolio-images/card-6.jpg";
+import card6 from "../../assets/images/portfolio-images/card-6.png";
 
 const projectData = [
-  { id: 1, image: card1, category: "QA TESTING", title: "Petty Cash Request", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, dapibus ac porttitor ut, lacinia venenatis lectus.." },
-  { id: 2, image: card2, category: "QA TESTING", title: "Cash Advance Request", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, dapibus ac porttitor ut, lacinia venenatis lectus.." },
-  { id: 3, image: card3, category: "QA TESTING", title: "FPC Review Process", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, dapibus ac porttitor ut, lacinia venenatis lectus.." },
-  { id: 4, image: card4, category: "QA TESTING", title: "CEO Approval Workflow", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, dapibus ac porttitor ut, lacinia venenatis lectus.." },
-  { id: 5, image: card5, category: "QA TESTING", title: "Cash Release by FPC", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, dapibus ac porttitor ut, lacinia venenatis lectus.." },
-  { id: 6, image: card6, category: "QA TESTING", title: "Acknowledgement & Receipt Upload", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, dapibus ac porttitor ut, lacinia venenatis lectus.." },
+  { id: 1, image: card1, category: "QA TESTING", title: "BGC Bus App", description: "Transport app for commuters to pay for their bus fare as well as track the arrival time of the buses to their nearest station." },
+  { id: 2, image: card2, category: "QA TESTING", title: "San Pedro App", description: "An app catered for the citizens to immediately request for emergency assistance and keep track of the latest news from their government." },
+  { id: 3, image: card3, category: "QA TESTING", title: "Mission Eye (Tagaligtas)", description: "Web application which consists of a GIS map to aid military missions as well as modules to help digitalize other manual processes." },
+  { id: 4, image: card4, category: "QA TESTING", title: "e-Notary", description: "Web application that allows users to request a digital notarization as well as consultations with lawyers online." },
+  { id: 5, image: card5, category: "QA TESTING", title: "Project Liwanag", description: "Advanced e-learning platform tailored for teachers to help them gain more knowledge and skills to become more efficient in teaching their students." },
+  { id: 6, image: card6, category: "QA TESTING", title: "IRIS", description: "Digital Signage Content Management System which helps organizations manage and display digital content on their signage systems." },
 ];
 
 const hardcodedTestCases = {
@@ -173,9 +173,9 @@ const ProjectView = () => {
   return (
     <div className="content mt-10 md:mt-15 xl:mt-25 mb-10 md:mb-25 max-xxl:p-2" id="project">
       <div className="xl:mb-17.5 mb-5 text-center">
-        <p className="section-title">Projects</p>
+        <p className="section-title">Recent Projects</p>
         <p className="font-normal text-[18px] pt-6 text-gray-400">
-          Sample QA projects with detailed test cases
+          Here are the recent projects that I have worked on as a QA Analyst. Click on "See More" to view some of the test cases that I have executed for each project. 
         </p>
       </div>
 
@@ -186,7 +186,7 @@ const ProjectView = () => {
               key={project.id}
               data={project}
               onSeeMoreClick={() => openModal(project)}
-              onImageClick={() => openImageModal(project.image)} // Pass function to child
+              onImageClick={() => openImageModal(project.image)}
             />
           ))}
         </div>
@@ -231,6 +231,7 @@ const ProjectView = () => {
               {/* Test cases section */}
               <div className="p-6">
                 <h3 className="text-lg font-semibold mb-4">Test Cases</h3>
+                <h6 className="text-gray-500 mb-4">Please note that due to confidentiality agreements, all test steps and test data are omitted for security reasons.</h6>
                 <TestCaseTable testData={hardcodedTestCases[selectedProject.id] || []} />
               </div>
             </div>

@@ -3,6 +3,7 @@ import Profile from "../components/profile/Profile";
 import WorkProcess from "../components/workProcess/WorkProcess";
 import ProjectView from "../components/project/ProjectView";
 import AboutMe from "../components/about-me/about-me";
+import Cert from "../components/certs/Cert.jsx";
 import Companies from "../components/companies/companies.jsx";
 import Contact from "../components/contact/Contact";
 import "../../index.css";
@@ -22,6 +23,7 @@ const Home = () => {
       <ProjectView />
       <div className="bg-soft-white">
         <AboutMe />
+        <Cert />
       </div>
       <Companies />
       {/* <Testimonial /> */}

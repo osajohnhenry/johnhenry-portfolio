@@ -159,7 +159,7 @@ const Form = () => {
             <p className="text-xs md:text-sm text-gray-500 leading-relaxed mt-2">
               <span className="font-semibold text-gray-600">Note:</span> This form is fully
               functional and is able to send your message to my personal email. Please
-              refrain from sending message multiple times as a form of prank because this
+              refrain from sending messages multiple times as a form of prank because this
               feature is charged. Thank you for your understanding!
             </p>
 

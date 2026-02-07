@@ -30,7 +30,7 @@ const Footer = () => {
               to={item.url.toLowerCase()}
               smooth={true}
               duration={1000}
-              offset={-140}
+              offset={-120}
             >
               {item.name}
               <span className="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>

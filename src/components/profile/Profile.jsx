@@ -99,7 +99,7 @@ const Profile = () => {
               to="project"  // Updated to match ProjectView ID
               smooth={true}
               duration={1000}
-              offset={-140}
+              offset={-120}
             >
               My Projects
             </Link>

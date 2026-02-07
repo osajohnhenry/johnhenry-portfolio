@@ -43,7 +43,7 @@ const WorkProcess = () => {
       id="work-process"
     >
       <div className="lg:pe-10 xl:pe-35.75 max-xs:mb-3 max-xl:mb-8">
-        <p className="section-title max-xl:text-center">Work Process</p>
+        <p className="section-title max-xl:text-center">Current Work Process in the Company</p>
         <p className="mt-6 mb-4 md:text-[18px] text-sm font-normal max-xl:text-center text-gray-500">
           Collaborate with the entire development team throughout every project—working closely with the business analysts to understand requirements,
           designers to ensure usability and alignment with user expectation, developers to identify and resolve issues early on, and

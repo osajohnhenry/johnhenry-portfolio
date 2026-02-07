@@ -15,9 +15,9 @@ const AboutMe = () => {
             <h3 className="font-semibold text-[16px] sm:text-xl">JOHN HENRY OSA</h3>
 
             <p className="mt-3 text-gray-500">
-              Innovative and deadline-driven Quality Assurance Analyst with 2+ years of experience
+              Innovative and deadline-driven Quality Assurance Analyst with over 1.7 years of experience
               in manual testing of web and mobile applications. Adept at
-              identifying bugs and performance issues to ensure optimal user experience.
+              identifying issues to ensure optimal user experience.
             </p>
 
             <ul className="mt-4 text-gray-500 space-y-1">
@@ -51,14 +51,14 @@ const AboutMe = () => {
               </p>
             </div>
 
-            {/* DOT */}
-            <div className="absolute left-[-7px] top-[135px] w-3 h-3 rounded-full bg-white border border-gray-500"></div>
 
             {/* SENIOR HIGH */}
             <div>
+              
               <h3 className="font-semibold text-gray-800">
-                INFORMATION AND COMMUNICATIONS TECHNOLOGY (ICT) MAJOR IN WEB & MOBILE DEVELOPMENT
+                INFORMATION AND COMMUNICATIONS TECHNOLOGY 
               </h3>
+              <h3 className="font-semibold text-gray-800">(IT IN MOBILE APP & WEB DEVELOPMENT)</h3>
               <p className="mt-1 text-gray-500">Batch 2018</p>
               <p className="italic text-gray-500">
                 STI College, Meycauayan, Bulacan
@@ -92,17 +92,16 @@ const AboutMe = () => {
             <p className="italic text-gray-500">Teochnologies Inc., Pasay</p>
 
             <ul className="mt-3 space-y-2 list-disc ps-5">
-              <li>Collaborate with the teams, including designers, developers and business analyst to understand requirements, identify potential issues, and drive quality improvements throughout the software development lifecycle.</li>
-              <li>Design, develop, and execute manual test scripts to verify software functionality, performance, and reliability.</li>
-              <li>Conduct smoke, functional end-to-end, regression, and retests to ensure that the software meets the desired functionalities with less to no error.</li>
-              <li>Participate in release planning and coordinate testing efforts to ensure timely and successful product releases. </li>
-              <li>Lead efforts to improve how quality checks are done, helping the team work more efficiently and deliver better results across the organization. </li>
+              <li>Create and maintain test cases and test scripts to ensure full application test coverage.</li>
+              <li>Design and execute manual test scripts to validate functionality, performance, and system reliability.</li>
+              <li>Perform smoke, end-to-end functional, regression, and retesting to ensure stable, error-free releases.</li>
+              <li>Support release planning and coordinated testing activities to enable on-time and successful deployments.</li>
+              <li>Lead continuous improvements in QA processes to increase team efficiency and overall product quality</li>
             </ul>
           </div>
 
-          {/* DOT */}
-          <div className="absolute left-[-7px] top-[230px] w-3 h-3 rounded-full bg-white border border-gray-500"></div>
-
+          {/* DOT
+          <div className="absolute left-[-7px] top-[230px] w-3 h-3 rounded-full bg-white border border-gray-500"></div> */}
           {/* JOB 2 */}
           <div className="text-[14px] sm:text-lg text-gray-600">
             <h3 className="font-semibold text-gray-800">

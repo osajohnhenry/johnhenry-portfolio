@@ -25,7 +25,7 @@ const menu = navItems.map((item) => (
       smooth={true}
       duration={1000}
       spy={true}
-      offset={-90}
+      offset={-120}
       activeStyle={{
         backgroundColor: "#297dfbff",
         color: "white",
@@ -53,7 +53,7 @@ const NavBar = () => {
   return (
     <div
       className={`sticky top-0 ${
-        position > 70
+        position > 110
           ? "bg-soft-white border-b border-gray-300"
           : "bg-white border-white"
       } z-50 transition-all duration-1000`}
