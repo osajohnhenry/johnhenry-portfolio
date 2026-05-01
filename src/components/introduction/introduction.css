@@ -11,13 +11,13 @@
 
 .hover-text-placeholder {
   position: absolute;
-  bottom: 1rem; /* Adjust as needed */
-  right: 1rem;   /* Adjust as needed */
+  bottom: 1rem;
+  right: 1rem;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-size: 0.75rem;
   z-index: 10;
-  pointer-events: none; /* Ensures the text doesn't interfere with mouse events */
+  pointer-events: none;
 }

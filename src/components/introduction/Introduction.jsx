@@ -3,7 +3,7 @@ import person from "../../assets/images/person2.jpg";
 import hoverPerson from "../../assets/images/person-hover2.jpg";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
-import { Link } from "react-scroll"; // Import Link from react-scroll
+import { Link } from "react-scroll";
 
 const informationSummaryData = [
   { id: 1, title: "Years of Experience", description: "1.7" },
