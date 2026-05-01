@@ -53,8 +53,8 @@ const Form = () => {
           message: 'Message sent successfully! Kindly wait for a response from my side.'
         });
         setShowModal(true);
-        form.current.reset();
-        setMessageValue('');
+        form.current.reset(); // Clear form after successful submission
+        setMessageValue(''); // Reset state
     }, (error) => {
         console.log(error.text);
         setModalContent({
@@ -146,12 +146,12 @@ const Form = () => {
                 className={`${commonClass} resize-none`}
                 value={messageValue}
                 onChange={(e) => setMessageValue(e.target.value)}
-                maxLength={1000}
+                maxLength={500}
                 required
                 rows={4}
               />
               <div className="text-right text-xs mt-1 text-gray-500">
-                {messageValue.length}/1000
+                {messageValue.length}/500
               </div>
             </div>
 
