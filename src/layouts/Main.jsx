@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/common/navbar/NavBar";
 import Footer from "../components/common/footer/Footer";
@@ -7,9 +7,33 @@ import ScrollToTop from "../components/common/scrollToTop/ScrollToTop";
 const Main = () => {
   const [activeSection, setActiveSection] = useState("introduction");
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("[id]");
+      let current = "introduction";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+
+        // section is in viewport center zone
+        if (rect.top <= 200 && rect.bottom >= 200) {
+          current = section.id;
+        }
+      });
+
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    handleScroll(); // run once on load
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div data-theme={"light"} className="relative">
-      <NavBar 
+    <div data-theme="light" className="relative">
+      <NavBar
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
