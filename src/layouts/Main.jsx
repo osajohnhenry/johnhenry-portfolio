@@ -5,7 +5,6 @@ import Footer from "../components/common/footer/Footer";
 import ScrollToTop from "../components/common/scrollToTop/ScrollToTop";
 
 const Main = () => {
-  // 🔥 Shared state (this fixes your error)
   const [activeSection, setActiveSection] = useState("introduction");
 
   return (

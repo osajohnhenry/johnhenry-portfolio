@@ -30,7 +30,6 @@ const NavBar = ({ activeSection, setActiveSection }) => {
     };
   }, []);
 
-  // 🔥 MOVE menu HERE (inside component)
   const menu = navItems.map((item) => {
     const isActive = activeSection === item.url.toLowerCase();
 
