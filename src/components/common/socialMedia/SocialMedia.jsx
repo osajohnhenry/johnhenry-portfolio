@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const socialIcons = [
   { icon: faFacebookF, link: "https://www.facebook.com/jheno1st" },
   { icon: faLinkedin, link: "https://www.linkedin.com/in/jheno/" },
-  { icon: faViber, link: "viber://639055116752" },
+  { icon: faViber, link: "viber://chat?number=%2B639055116752" },
 ];
 
 const SocialMedia = () => {
