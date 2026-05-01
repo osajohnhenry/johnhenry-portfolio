@@ -15,7 +15,6 @@ const Main = () => {
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
 
-        // section is in viewport center zone
         if (rect.top <= 200 && rect.bottom >= 200) {
           current = section.id;
         }
