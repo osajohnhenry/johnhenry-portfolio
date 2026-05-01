@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
+=======
+>>>>>>> main
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/common/navbar/NavBar";
 import Footer from "../components/common/footer/Footer";
 import ScrollToTop from "../components/common/scrollToTop/ScrollToTop";
 
 const Main = () => {
+<<<<<<< HEAD
   const [activeSection, setActiveSection] = useState("introduction");
 
   useEffect(() => {
@@ -37,12 +41,15 @@ const Main = () => {
         setActiveSection={setActiveSection}
       />
 
+=======
+  return (
+    <div data-theme={"light"} className="relative">
+      <NavBar />
+>>>>>>> main
       <Outlet />
-
       <div className="bg-[#2A374A]">
-        <Footer setActiveSection={setActiveSection} />
+        <Footer />
       </div>
-
       <ScrollToTop />
     </div>
   );

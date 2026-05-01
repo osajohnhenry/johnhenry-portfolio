@@ -4,8 +4,7 @@ import { animateScroll } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const scrollToTop = () => {
-  animateScroll.scrollToTop(options); /* To Top */
-  //   animateScroll.scrollToBottom(options); /* To Bottom */
+  animateScroll.scrollToTop(options);
 };
 
 const options = {

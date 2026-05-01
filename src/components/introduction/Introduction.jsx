@@ -3,11 +3,14 @@ import person from "../../assets/images/person2.jpg";
 import hoverPerson from "../../assets/images/person-hover2.jpg";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
-import calculateExperience from "./startDate";
 import { Link } from "react-scroll";
 
 const informationSummaryData = [
+<<<<<<< HEAD
    { id: 1, title: "Years of Experience", description: calculateExperience("2024-08-19") },
+=======
+  { id: 1, title: "Years of Experience", description: "1.7" },
+>>>>>>> main
   { id: 2, title: "Involved Projects", description: "15" },
   { id: 3, title: "Companies worked at", description: "2" },
 ];
