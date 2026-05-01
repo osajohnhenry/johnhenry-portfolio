@@ -2,7 +2,6 @@ import Marquee from "react-fast-marquee";
 
 const commonImgClass = "h-8 sm:h-12 md:h-16 object-contain";
 
-// Import images directly
 import paideskLogo from "../../assets/images/paidesk-logo.jpg";
 import teoLogo from "../../assets/images/teo-logo.png";
 

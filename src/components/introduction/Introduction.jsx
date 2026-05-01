@@ -3,10 +3,11 @@ import person from "../../assets/images/person2.jpg";
 import hoverPerson from "../../assets/images/person-hover2.jpg";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
-import { Link } from "react-scroll"; // Import Link from react-scroll
+import calculateExperience from "./startDate";
+import { Link } from "react-scroll";
 
 const informationSummaryData = [
-  { id: 1, title: "Years of Experience", description: "1.7" },
+  { id: 1, title: "Years of Experience", description: calculateExperience("2024-08-19") },
   { id: 2, title: "Involved Projects", description: "15" },
   { id: 3, title: "Companies worked at", description: "2" },
 ];
@@ -27,7 +28,7 @@ const Introduction = () => {
     setIsHoveredLong(false);
   };
 
-  // Effect to disable right-click on the image
+  // disable right-click sa image
   useEffect(() => {
     const imageElement = imageRef.current;
     
@@ -71,7 +72,7 @@ const Introduction = () => {
               to="contact"
               smooth={true}
               duration={1000}
-              offset={-120} // Adjust this value based on your header height
+              offset={-90}
             >
               Say Hello!
             </Link>

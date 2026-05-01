@@ -12,7 +12,7 @@ const navItems = [
 ];
 const copyrightYear = new Date().getFullYear();
 
-const Footer = () => {
+const Footer = ({ setActiveSection }) => {
   return (
     <div className="pt-25 md:pt-40 content max-2xl:px-3">
       <div className="flex max-md:flex-col justify-between mx-0 items-center h-full w-full text-neutral-200">
@@ -25,13 +25,14 @@ const Footer = () => {
         <div className="mx-7 max-md:my-7 text-center">
           {navItems.map((item) => (
             <Link
-              key={item.id}
-              className="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] cursor-pointer"
-              to={item.url.toLowerCase()}
-              smooth={true}
-              duration={1000}
-              offset={-120}
-            >
+                key={item.id}
+                className="mx-2 group inline-block relative w-fit text-[12px] sm:text-[16px] cursor-pointer"
+                to={item.url.toLowerCase()}
+                smooth={true}
+                duration={1000}
+                offset={-120}
+                onClick={() => setActiveSection(item.url.toLowerCase())}
+              >
               {item.name}
               <span className="absolute left-0 bottom-0 h-0.5 w-full bg-white scale-x-0 duration-300 group-hover:scale-x-100"></span>
             </Link>

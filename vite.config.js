@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), tailwindcss()],
     server: {
       open: true,
-      host: false, // Allow access from network devices
+      host: false,
       proxy: {
         "/api": {
           target: "http://localhost:5000",

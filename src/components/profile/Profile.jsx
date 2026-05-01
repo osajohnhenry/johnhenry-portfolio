@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-scroll"; // Add this import
+import { Link } from "react-scroll";
 import person from "../../assets/images/person2.jpg";
 import hoverPerson from "../../assets/images/person-hover.jpg"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
