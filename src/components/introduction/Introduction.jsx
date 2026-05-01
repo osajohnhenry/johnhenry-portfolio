@@ -27,7 +27,6 @@ const Introduction = () => {
     setIsHoveredLong(false);
   };
 
-  // Effect to disable right-click on the image
   useEffect(() => {
     const imageElement = imageRef.current;
     
