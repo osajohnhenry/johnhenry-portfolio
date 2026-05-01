@@ -19,5 +19,5 @@
   border-radius: 0.5rem;
   font-size: 0.75rem;
   z-index: 10;
-  pointer-events: none; /* Ensures the text doesn't interfere with mouse events */
+  pointer-events: none;
 }
