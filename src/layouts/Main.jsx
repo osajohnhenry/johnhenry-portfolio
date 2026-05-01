@@ -26,7 +26,7 @@ const Main = () => {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
-    handleScroll(); // run once on load
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
