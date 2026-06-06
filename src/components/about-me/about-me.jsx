@@ -1,3 +1,5 @@
+import calculateExperience from "../introduction/startDate";
+
 const AboutMe = () => {
   return (
     <div
@@ -15,7 +17,7 @@ const AboutMe = () => {
             <h3 className="font-semibold text-[16px] sm:text-xl">JOHN HENRY OSA</h3>
 
             <p className="mt-3 text-gray-500">
-              Innovative and deadline-driven Quality Assurance Analyst with over 1.7 years of experience
+              Innovative and deadline-driven Quality Assurance Analyst with over {calculateExperience("2024-08-19")} years of experience
               in manual testing of web and mobile applications. Adept at
               identifying issues to ensure optimal user experience.
             </p>
