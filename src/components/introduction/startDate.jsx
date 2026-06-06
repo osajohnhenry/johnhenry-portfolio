@@ -10,8 +10,15 @@ const calculateExperience = (startDateStr) => {
     months += 12;
   }
   
-  const formatted = years + (months > 0 ? parseFloat(`.${months}`) : 0);
-  return formatted.toFixed(1);
+  if (years === 0 && months === 0) {
+    return "0";
+  }
+
+  if (months === 0) {
+    return `${years}`;
+  }
+
+  return `${years}.${months.toString().padStart(2, '0')}`;
 };
 
 export default calculateExperience;
