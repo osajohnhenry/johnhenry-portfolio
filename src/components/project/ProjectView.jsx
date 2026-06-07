@@ -1,20 +1,6 @@
 import { useState } from "react";
 import Projects from "./Projects";
-import card1 from "../../assets/images/portfolio-images/card-1.jpg";
-import card2 from "../../assets/images/portfolio-images/card-2.jpg";
-import card3 from "../../assets/images/portfolio-images/card-3.png";
-import card4 from "../../assets/images/portfolio-images/card-4.png";
-import card5 from "../../assets/images/portfolio-images/card-5.png";
-import card6 from "../../assets/images/portfolio-images/card-6.png";
-
-const projectData = [
-  { id: 1, image: card1, category: "QA TESTING", title: "BGC Bus App", description: "Transport app for commuters to pay for their bus fare as well as track the arrival time of the buses to their nearest station.", testingConducted: ["Validated guest access and restricted feature handling for unregistered users", "Tested QR payment system and e-wallet transaction flow", "Verified real-time bus arrival tracking and departure indicators on the route map"] },
-  { id: 2, image: card2, category: "QA TESTING", title: "San Pedro App", description: "An app catered for the citizens to immediately request for emergency assistance and keep track of the latest news from their government.", testingConducted: ["Validated onboarding flow and registration process for new users", "Tested MPIN setup and account creation workflow", "Verified emergency assistance request submission and government news feed functionality"] },
-  { id: 3, image: card3, category: "QA TESTING", title: "Mission Eye (Tagaligtas)", description: "GIS-based situational awareness and incident tracking platform which provides a real-time operational view via an interactive map.", testingConducted: ["Validated GIS-based interactive map rendering and real-time location accuracy", "Tested incident reporting and tracking workflow from creation to resolution", "Verified real-time situational awareness dashboard data updates"] },
-  { id: 4, image: card4, category: "QA TESTING", title: "e-Notary", description: "Web application that allows users to request a digital notarization as well as consultations with lawyers online.", testingConducted: ["Validated digital notarization request and document upload workflow", "Tested online lawyer consultation booking and scheduling system", "Verified secure user authentication and document management features"] },
-  { id: 5, image: card5, category: "QA TESTING", title: "Project Liwanag", description: "Advanced e-learning platform tailored for teachers to help them gain more knowledge and skills to become more efficient in teaching their students.", testingConducted: ["Validated course enrollment and skill-building module accessibility", "Tested content delivery and interactive learning assessment tools", "Verified teacher progress tracking and performance reporting features"] },
-  { id: 6, image: card6, category: "QA TESTING", title: "IRIS", description: "Digital Signage Content Management System which helps organizations manage and display digital content on their signage systems.", testingConducted: ["Validated digital content upload, scheduling, and display rendering", "Tested multi-screen signage management and content synchronization", "Verified organization-wide content distribution and role-based access control"] },
-];
+import { projectData } from "./projectData.jsx";
 const ProjectView = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [enlargedImage, setEnlargedImage] = useState(null); // State sa clicked image
@@ -95,7 +81,7 @@ const ProjectView = () => {
 
               {/* Testing Conducted section */}
               <div className="p-6">
-                <h3 className="text-lg font-semibold mb-4">Testing Conducted</h3>
+                <h3 className="text-lg font-semibold mb-4">Testing Conducted (Smoke, Functional, Regression)</h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-600">
                   {selectedProject.testingConducted?.map((item, index) => (
                     <li key={index}>{item}</li>
